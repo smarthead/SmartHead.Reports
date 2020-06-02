@@ -1,2 +1,2 @@
-# SmarthHead.Reports
+# SmartHead.Reports
 Package for data reports
