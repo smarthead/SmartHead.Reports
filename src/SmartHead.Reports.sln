@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartHead.Reports.Core", "SmartHead.Reports.Core\SmartHead.Reports.Core.csproj", "{0936B368-2402-4071-9D21-91A3830DE0B9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartHead.Reports.Excel", "SmartHead.Reports.Excel\SmartHead.Reports.Excel.csproj", "{0990053B-D75B-4CE7-98C8-CB165ECF5734}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartHead.Reports.Example", "SmartHead.Reports.Example\SmartHead.Reports.Example.csproj", "{4E4D8C86-A12D-493D-BE68-B449AC93A578}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0936B368-2402-4071-9D21-91A3830DE0B9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0936B368-2402-4071-9D21-91A3830DE0B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0936B368-2402-4071-9D21-91A3830DE0B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0936B368-2402-4071-9D21-91A3830DE0B9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0990053B-D75B-4CE7-98C8-CB165ECF5734}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0990053B-D75B-4CE7-98C8-CB165ECF5734}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0990053B-D75B-4CE7-98C8-CB165ECF5734}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0990053B-D75B-4CE7-98C8-CB165ECF5734}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4E4D8C86-A12D-493D-BE68-B449AC93A578}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4E4D8C86-A12D-493D-BE68-B449AC93A578}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4E4D8C86-A12D-493D-BE68-B449AC93A578}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4E4D8C86-A12D-493D-BE68-B449AC93A578}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
