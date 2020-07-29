@@ -1,7 +1,10 @@
-﻿namespace SmartHead.Reports.Core
+﻿using System.Reflection;
+
+namespace SmartHead.Reports.Core
 {
-    public interface IReporter<in T>
-    {
-        byte[] Export(T[] input, byte[] template = null);
+    public interface IReporter<in TInput, in TOptions, out TResult>
+        where TOptions: class
+    { 
+        TResult Export(TInput[] input, TOptions options = null);
     }
 }
