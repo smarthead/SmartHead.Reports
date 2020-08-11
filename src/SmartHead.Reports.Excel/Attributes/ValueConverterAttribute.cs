@@ -1,7 +1,7 @@
 using System;
-using SmartHead.Reports.Core.Interfaces;
+using SmartHead.Reports.Abstractions.Converters;
 
-namespace SmartHead.Reports.Core.Attributes
+namespace SmartHead.Reports.Abstractions.Attributes
 {
     [AttributeUsage(AttributeTargets.Property, AllowMultiple = false)]
     public class ValueConverterAttribute: Attribute
@@ -13,7 +13,7 @@ namespace SmartHead.Reports.Core.Attributes
             ConverterType = converterType 
                             ?? throw new ArgumentNullException(nameof(converterType));
 
-            if(!typeof(IValueConverter<,>).IsAssignableFrom(converterType))
+            if(!typeof(IValueConverter).IsAssignableFrom(converterType))
                 throw new InvalidOperationException(nameof(converterType));
         }
     }

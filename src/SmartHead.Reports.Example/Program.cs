@@ -1,23 +1,32 @@
-using System;
-using System.Collections.Generic;
+﻿using System;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Hosting;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
+using SmartHead.Reports.Example.Reporters;
+using SmartHead.Reports.Excel.Reporters;
 
 namespace SmartHead.Reports.Example
 {
-    public class Program
+    class Program
     {
-        public static void Main(string[] args)
+        static async Task Main(string[] args)
         {
-            CreateHostBuilder(args).Build().Run();
-        }
+            var data = Enumerable
+                .Range(0, 1000)
+                .Select(x => new User
+                {
+                    Name = $"{nameof(User.Name)} {x}",
+                    Role = x % 2 == 0 ? Role.Admin : Role.Guest,
+                    IsLocked = x % 2 != 0
+                })
+                .ToArray();
 
-        public static IHostBuilder CreateHostBuilder(string[] args) =>
-            Host.CreateDefaultBuilder(args)
-                .ConfigureWebHostDefaults(webBuilder => { webBuilder.UseStartup<Startup>(); });
+            var reporter = new ExcelReporter<User>();
+
+            var report = reporter.Export(data, new ReportOptions());
+
+            await using var s = File.Create("data.xlsx");
+            await s.WriteAsync(report);
+        }
     }
 }

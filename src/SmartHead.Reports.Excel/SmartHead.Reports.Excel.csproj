@@ -5,15 +5,11 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\SmartHead.Reports.Core\SmartHead.Reports.Core.csproj" />
-    </ItemGroup>
-
-    <ItemGroup>
       <PackageReference Include="EPPlus" Version="5.1.2" />
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="Attributes" />
+      <Folder Include="Abstractions" />
     </ItemGroup>
 
 </Project>
