@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace SmartHead.Reports.Core.Attributes
+namespace SmartHead.Reports.Abstractions.Attributes
 {
     [AttributeUsage(AttributeTargets.Property)]
     public class ExportIgnoreAttribute : Attribute
