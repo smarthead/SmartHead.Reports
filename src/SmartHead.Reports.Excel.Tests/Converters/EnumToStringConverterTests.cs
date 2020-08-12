@@ -22,7 +22,6 @@ namespace SmartHead.Reports.Excel.Tests.Converters
 
         [Theory]
         [InlineData(null)]
-        [InlineData(Order.First)]
         public void EnumToStringConverter_ShouldReturn_EmptyString_For_Given_Values(object value)
         {
             var result = _converter.Convert(value);

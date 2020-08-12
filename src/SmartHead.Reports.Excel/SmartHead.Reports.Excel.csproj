@@ -2,10 +2,19 @@
 
     <PropertyGroup>
         <TargetFramework>netcoreapp3.1</TargetFramework>
+        <LangVersion>8</LangVersion>
+        <AssemblyName>SmartHead.Reports.Excel</AssemblyName>
+        <IsPackable>true</IsPackable>
+        <Authors>Dmitry Dmitriev</Authors>
+        <PackageProjectUrl>https://github.com/smarthead/SmartHead.Reports</PackageProjectUrl>
+        <Version>0.0.1</Version>
+        <Company>SmartHead</Company>
+        <IsTestProject>false</IsTestProject>
+        <Description>SmartHead.Reports.Excel</Description>
     </PropertyGroup>
 
     <ItemGroup>
-      <PackageReference Include="EPPlus" Version="5.1.2" />
+      <PackageReference Include="EPPlus" Version="5.2.1" />
     </ItemGroup>
 
     <ItemGroup>
