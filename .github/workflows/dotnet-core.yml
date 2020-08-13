@@ -7,9 +7,7 @@ on:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
-
     steps:
     - uses: actions/checkout@v2
     - name: Setup .NET Core
@@ -24,9 +22,9 @@ jobs:
       run: |
         cd src/
         dotnet test
+
   publish:
     runs-on: ubuntu-latest
-
     steps:
     - uses: actions/checkout@v2
     - name: Setup .NET Core
@@ -34,6 +32,8 @@ jobs:
       with:
         dotnet-version: 3.1.301
     - name: Build package for Release
+      env:
+        VERSION: ${{ GITHUB_RUN_NUMBER }}
       run: |
         cd src/
         dotnet pack -c Release
