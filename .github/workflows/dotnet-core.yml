@@ -33,7 +33,7 @@ jobs:
         dotnet-version: 3.1.301
     - name: Build package for Release
       env:
-        VERSION: ${{ env.GITHUB_RUN_NUMBER }}
+        VERSION: $GITHUB_RUN_NUMBER
       run: |
         cd src/
         echo $VERSION
