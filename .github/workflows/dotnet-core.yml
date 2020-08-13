@@ -32,11 +32,9 @@ jobs:
       with:
         dotnet-version: 3.1.301
     - name: Build package for Release
-      env:
-        VERSION: $GITHUB_RUN_NUMBER
       run: |
         cd src/
-        echo $VERSION
+        echo $GITHUB_RUN_NUMBER
         dotnet pack -c Release
     - name: Push package to nuget
       env:
