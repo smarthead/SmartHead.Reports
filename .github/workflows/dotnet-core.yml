@@ -36,6 +36,7 @@ jobs:
         VERSION: ${{ GITHUB_RUN_NUMBER }}
       run: |
         cd src/
+        echo $VERSION
         dotnet pack -c Release
     - name: Push package to nuget
       env:
